@@ -31,195 +31,49 @@ export const  sliderdata = [
   {name:"4" , imageLink:"/" ,description:"this slide for the image"},
 ]
 
-export const teamsData =[
-{
-    year :2023,
-    data :[
-        {
-            "email": "adityabhalerao098@gmail.com",
-            "name": "Aditya bhalerao",
-            "DOB": "01/12/2003",
-            "BT_ID": "BT210020CS",
-            "position": "Member",
-            "type": "Content Editor Committee",
-            "LinkedInlink": "https://www.linkedin.com/in/aditya-bhalerao-a15942237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            "FacebookLink": "https://www.facebook.com/aditya.bhalerao.946?mibextid=ZbWKwL",
-            "Instagramlink": "https://instagram.com/adityabhalerao_20?igshid=OGQ5ZDc2ODk2ZA==",
-            "yearStudy": "3rd year",
-            "cgpa": 9.45,
-            "hobby": "Playing cricket",
-            "skill": "App development",
-            "summary": "I am Aditya bhalerao from CSE 3rd year and I like to do programming and I have learned various languages such c, Java , python, kotlin and I am skilled in app development",
-            "photo": "https://drive.google.com/uc?export=view&id=1_u7uk548ahVomFFq7Ue2HEgX8unLSFEi"
-          },
-
-          {
-            "email": "adityabhalerao098@gmail.com",
-            "name": "Aditya bhalerao",
-            "DOB": "01/12/2003",
-            "BT_ID": "BT210020CS",
-            "position": "Member",
-            "type": "Content Editor Committee",
-            "LinkedInlink": "https://www.linkedin.com/in/aditya-bhalerao-a15942237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            "FacebookLink": "https://www.facebook.com/aditya.bhalerao.946?mibextid=ZbWKwL",
-            "Instagramlink": "https://instagram.com/adityabhalerao_20?igshid=OGQ5ZDc2ODk2ZA==",
-            "yearStudy": "3rd year",
-            "cgpa": 9.45,
-            "hobby": "Playing cricket",
-            "skill": "App development",
-            "summary": "I am Aditya bhalerao from CSE 3rd year and I like to do programming and I have learned various languages such c, Java , python, kotlin and I am skilled in app development",
-            "photo": "https://drive.google.com/uc?export=view&id=1_u7uk548ahVomFFq7Ue2HEgX8unLSFEi"
-          },
-
-          {
-            "email": "adityabhalerao098@gmail.com",
-            "name": "Aditya Chandure",
-            "DOB": "01/12/2003",
-            "BT_ID": "BT210020CS",
-            "position": "President",
-            "type": "Admin",
-            "LinkedInlink": "https://www.linkedin.com/in/aditya-bhalerao-a15942237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            "FacebookLink": "https://www.facebook.com/aditya.bhalerao.946?mibextid=ZbWKwL",
-            "Instagramlink": "https://instagram.com/adityabhalerao_20?igshid=OGQ5ZDc2ODk2ZA==",
-            "yearStudy": "3rd year",
-            "cgpa": 9.45,
-            "hobby": "Playing cricket",
-            "skill": "App development",
-            "summary": "I am Aditya bhalerao from CSE 3rd year and I like to do programming and I have learned various languages such c, Java , python, kotlin and I am skilled in app development",
-            "photo": "https://drive.google.com/uc?export=view&id=1_u7uk548ahVomFFq7Ue2HEgX8unLSFEi"
-          },
-
-          {
-            "email": "adityabhalerao098@gmail.com",
-            "name": "Aman Thakure ",
-            "DOB": "01/12/2003",
-            "BT_ID": "BT210020CS",
-            "position": "Head",
-            "type": "Discipline Committee",
-            "LinkedInlink": "https://www.linkedin.com/in/aditya-bhalerao-a15942237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            "FacebookLink": "https://www.facebook.com/aditya.bhalerao.946?mibextid=ZbWKwL",
-            "Instagramlink": "https://instagram.com/adityabhalerao_20?igshid=OGQ5ZDc2ODk2ZA==",
-            "yearStudy": "3rd year",
-            "cgpa": 9.45,
-            "hobby": "Playing cricket",
-            "skill": "App development",
-            "summary": "I am Aditya bhalerao from CSE 3rd year and I like to do programming and I have learned various languages such c, Java , python, kotlin and I am skilled in app development",
-            "photo": "https://drive.google.com/uc?export=view&id=1_u7uk548ahVomFFq7Ue2HEgX8unLSFEi"
-          },
-
-          {
-            "email": "adityabhalerao098@gmail.com",
-            "name": "Yash Zade ",
-            "DOB": "01/12/2003",
-            "BT_ID": "BT210020CS",
-            "position": "Co-Head",
-            "type": "TechSpot Committee",
-            "LinkedInlink": "https://www.linkedin.com/in/aditya-bhalerao-a15942237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            "FacebookLink": "https://www.facebook.com/aditya.bhalerao.946?mibextid=ZbWKwL",
-            "Instagramlink": "https://instagram.com/adityabhalerao_20?igshid=OGQ5ZDc2ODk2ZA==",
-            "yearStudy": "3rd year",
-            "cgpa": 9.45,
-            "hobby": "Playing cricket",
-            "skill": "App development",
-            "summary": "I am Aditya bhalerao from CSE 3rd year and I like to do programming and I have learned various languages such c, Java , python, kotlin and I am skilled in app development",
-            "photo": "https://drive.google.com/uc?export=view&id=1_u7uk548ahVomFFq7Ue2HEgX8unLSFEi"
-          },
-    ]
-}
-
-,
-{
-    year :2022,
-    data :[
-        {
-            "email": "adityabhalerao098@gmail.com",
-            "name": "Aman Ramteke",
-            "DOB": "01/12/2003",
-            "BT_ID": "BT210020CS",
-            "position": "Member",
-            "type": "Content Editor Committee",
-            "LinkedInlink": "https://www.linkedin.com/in/aditya-bhalerao-a15942237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            "FacebookLink": "https://www.facebook.com/aditya.bhalerao.946?mibextid=ZbWKwL",
-            "Instagramlink": "https://instagram.com/adityabhalerao_20?igshid=OGQ5ZDc2ODk2ZA==",
-            "yearStudy": "3rd year",
-            "cgpa": 9.45,
-            "hobby": "Playing cricket",
-            "skill": "App development",
-            "summary": "I am Aditya bhalerao from CSE 3rd year and I like to do programming and I have learned various languages such c, Java , python, kotlin and I am skilled in app development",
-            "photo": "https://drive.google.com/uc?export=view&id=1_u7uk548ahVomFFq7Ue2HEgX8unLSFEi"
-          },
-
-          {
-            "email": "adityabhalerao098@gmail.com",
-            "name": "Vikky Gol",
-            "DOB": "01/12/2003",
-            "BT_ID": "BT210020CS",
-            "position": "Member",
-            "type": "Content Editor Committee",
-            "LinkedInlink": "https://www.linkedin.com/in/aditya-bhalerao-a15942237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            "FacebookLink": "https://www.facebook.com/aditya.bhalerao.946?mibextid=ZbWKwL",
-            "Instagramlink": "https://instagram.com/adityabhalerao_20?igshid=OGQ5ZDc2ODk2ZA==",
-            "yearStudy": "3rd year",
-            "cgpa": 9.45,
-            "hobby": "Playing cricket",
-            "skill": "App development",
-            "summary": "I am Aditya bhalerao from CSE 3rd year and I like to do programming and I have learned various languages such c, Java , python, kotlin and I am skilled in app development",
-            "photo": "https://drive.google.com/uc?export=view&id=1_u7uk548ahVomFFq7Ue2HEgX8unLSFEi"
-          },
-
-          {
-            "email": "adityabhalerao098@gmail.com",
-            "name": "Rahul Nimaje",
-            "DOB": "01/12/2003",
-            "BT_ID": "BT210020CS",
-            "position": "President",
-            "type": "Admin",
-            "LinkedInlink": "https://www.linkedin.com/in/aditya-bhalerao-a15942237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            "FacebookLink": "https://www.facebook.com/aditya.bhalerao.946?mibextid=ZbWKwL",
-            "Instagramlink": "https://instagram.com/adityabhalerao_20?igshid=OGQ5ZDc2ODk2ZA==",
-            "yearStudy": "3rd year",
-            "cgpa": 9.45,
-            "hobby": "Playing cricket",
-            "skill": "App development",
-            "summary": "I am Aditya bhalerao from CSE 3rd year and I like to do programming and I have learned various languages such c, Java , python, kotlin and I am skilled in app development",
-            "photo": "https://drive.google.com/uc?export=view&id=1_u7uk548ahVomFFq7Ue2HEgX8unLSFEi"
-          },
-
-          {
-            "email": "adityabhalerao098@gmail.com",
-            "name": "Aman Thakure ",
-            "DOB": "01/12/2003",
-            "BT_ID": "BT210020CS",
-            "position": "Head",
-            "type": "Discipline Committee",
-            "LinkedInlink": "https://www.linkedin.com/in/aditya-bhalerao-a15942237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            "FacebookLink": "https://www.facebook.com/aditya.bhalerao.946?mibextid=ZbWKwL",
-            "Instagramlink": "https://instagram.com/adityabhalerao_20?igshid=OGQ5ZDc2ODk2ZA==",
-            "yearStudy": "3rd year",
-            "cgpa": 9.45,
-            "hobby": "Playing cricket",
-            "skill": "App development",
-            "summary": "I am Aditya bhalerao from CSE 3rd year and I like to do programming and I have learned various languages such c, Java , python, kotlin and I am skilled in app development",
-            "photo": "https://drive.google.com/uc?export=view&id=1_u7uk548ahVomFFq7Ue2HEgX8unLSFEi"
-          },
-
-          {
-            "email": "adityabhalerao098@gmail.com",
-            "name": "Yash Zade ",
-            "DOB": "01/12/2003",
-            "BT_ID": "BT210020CS",
-            "position": "Co-Head",
-            "type": "TechSpot Committee",
-            "LinkedInlink": "https://www.linkedin.com/in/aditya-bhalerao-a15942237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            "FacebookLink": "https://www.facebook.com/aditya.bhalerao.946?mibextid=ZbWKwL",
-            "Instagramlink": "https://instagram.com/adityabhalerao_20?igshid=OGQ5ZDc2ODk2ZA==",
-            "yearStudy": "3rd year",
-            "cgpa": 9.45,
-            "hobby": "Playing cricket",
-            "skill": "App development",
-            "summary": "I am Aditya bhalerao from CSE 3rd year and I like to do programming and I have learned various languages such c, Java , python, kotlin and I am skilled in app development",
-            "photo": "https://drive.google.com/uc?export=view&id=1_u7uk548ahVomFFq7Ue2HEgX8unLSFEi"
-          },
-    ]
-}
+export const committeedataList = [
+  {
+    "_id": "65252dde7f2fdadef417a6f0",
+    "name": "Content Editor Committee"
+  },
+  {
+    "_id": "65252e3f7f2fdadef417a6f4",
+    "name": "Technical Committee"
+  },
+  {
+    "_id": "65252e9f7f2fdadef417a6f8",
+    "name": "Creative Committee"
+  },
+  {
+    "_id": "65252eeb7f2fdadef417a6fc",
+    "name": "Sports Committee"
+  },
+  {
+    "_id": "65252f4b7f2fdadef417a700",
+    "name": "Publicity Committee"
+  },
+  {
+    "_id": "65252fd27f2fdadef417a704",
+    "name": "Discipline Committee"
+  },
+  {
+    "_id": "652530337f2fdadef417a708",
+    "name": "Event committee"
+  },
+  {
+    "_id": "652530a57f2fdadef417a70c",
+    "name": "Digital Committee"
+  },
+  {
+    "_id": "6525311a7f2fdadef417a710",
+    "name": "Techspot committee"
+  },
+  {
+    "_id": "652532e97f2fdadef417a724",
+    "name": "Startup Committee"
+  },
+  {
+    "_id": "652534787f2fdadef417a74c",
+    "name": "Admin"
+  }
 ]

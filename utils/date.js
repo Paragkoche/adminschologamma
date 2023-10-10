@@ -1,4 +1,12 @@
 
+export const getCurrentYear = ()=>{
+  const currentDate = new Date();
+
+// Get the current year from the Date object
+const currentYear = currentDate.getFullYear();
+return currentYear
+}
+
 export const stringTonumDate = (stringDate) =>{
 
 var datetime = new Date(stringDate);

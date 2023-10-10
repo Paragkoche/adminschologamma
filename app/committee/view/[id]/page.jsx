@@ -5,6 +5,7 @@ import {EventCard, Modal,Modal2 ,Title, UpdateCommittee, UpdateEvent} from '@/co
 import {FiEdit} from 'react-icons/fi'
 import Link from 'next/link'
 import Image from 'next/image';
+import { getCurrentYear } from '@/utils/date';
 function ViewCommittee({params}) {
   const [isUpdate ,setIsUpdate] =useState(false)
   const [isDelete ,setIsDelete] =useState(false)
@@ -21,20 +22,25 @@ function ViewCommittee({params}) {
     })
 
     const [eventData ,setEventData] =useState([])
+    const [teamData ,setTeamData] =useState([])
 
     useEffect(() => {
-  
+  const year = getCurrentYear()
       // if( committeeData.length===0) {
      const fetchData = async()=>{
       const res = await fetch(`/api/committee/viewId/${params.id}`)
       const data = await res.json()
       const res1 = await fetch(`/api/events/viewid/${params.id}`)
       const data1 = await res1.json()
+
+      const res2 = await fetch(`/api/teams/viewid2/${year}/${params.id} `)
+      const data2 = await res2.json()
   
       console.log("ima fetch inital data")
       console.log(data)
       data.ok && setCommitteeData(data.data)
       data1.ok && setEventData(data1.data)
+      data2.ok && setTeamData(data2.data)
     
      }
        fetchData()
@@ -118,7 +124,9 @@ function ViewCommittee({params}) {
   <FiEdit  className='p-2 bg-cyan-800 text-white text-[30px] shadow-lg rounded-full hover:bg-cyan-900'/></button>
   {/* </Link>  */}
       </div>
-<div className="">{committeeData.description }</div>
+<div className=""> {committeeData.description }</div>
+
+
 <div className="">
 <Title  name={`${committeeData.name} Committee Events`} classes={"text-center"}></Title>
 <Modal isOpen={isUpdate}  onClose={()=>setIsUpdate(false)}>
@@ -135,8 +143,24 @@ function ViewCommittee({params}) {
 <UpdateEvent updateEventData ={updateCardData} setIsUpdate={setIsUpdate1} committeeID = {committeeData._id} setAllEventData={setEventData} />
 
   </Modal2>
+
 </div>
 </div>
+
+
+{/* Our Teams */}
+<div className="">
+<Title name={"Our teams are"} />
+
+<div className="flex flex-row justify-center items-center flex-wrap">
+  {teamData.map(item =>(
+    <h1>{item.name}</h1>
+  ))}
+</div>
+
+</div>
+
+
     </div>
   )
 }

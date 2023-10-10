@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useContext, useEffect, useState } from 'react'
 import DataContext from '@/context/data/DataContext'
-
+import { findCommitteeNameById } from '@/utils/findNameCommitteeById'
 const TeamCardProfile = (    {name,
 BT_ID,
 DOB,
@@ -44,11 +44,14 @@ _id
 <p>Position</p> 
 <p>{position}</p> 
 
+<p>Belong :</p> 
+<p>{findCommitteeNameById(type)}</p>
+
 <p>Year :</p> 
 <p>{currentYear}</p>
 
 <p>Short Description:</p> 
-<p>{description}</p> 
+<p>{description.substring(0, 110)}...</p> 
 
 <p>skill:</p> 
 <p>{skill}</p>
