@@ -6,6 +6,7 @@ import {FiEdit} from 'react-icons/fi'
 import Link from 'next/link'
 import Image from 'next/image';
 import { getCurrentYear } from '@/utils/date';
+import ProfileClientCard from '@/components/ProfileClientCard';
 function ViewCommittee({params}) {
   const [isUpdate ,setIsUpdate] =useState(false)
   const [isDelete ,setIsDelete] =useState(false)
@@ -150,11 +151,21 @@ function ViewCommittee({params}) {
 
 {/* Our Teams */}
 <div className="">
-<Title name={"Our teams are"} />
+<Title name={"Our teams are"} classes={"text-center"}/>
 
-<div className="flex flex-row justify-center items-center flex-wrap">
-  {teamData.map(item =>(
-    <h1>{item.name}</h1>
+<div className="flex flex-row justify-around items-center flex-wrap w-[100%]">
+  {teamData?.filter(item=>item.position =="Head").map(item =>(
+   <ProfileClientCard key={item._id}  {...item}/>
+  ))}
+</div>
+<div className="flex flex-row justify-around items-center flex-wrap w-[100%]">
+  {teamData?.filter(item=>item.position =="Co-Head").map(item =>(
+   <ProfileClientCard key={item._id}  {...item}/>
+  ))}
+</div>
+<div className="flex flex-row justify-around items-center flex-wrap w-[100%]">
+  {teamData?.filter(item=>item.position =="Member").map(item =>(
+   <ProfileClientCard key={item._id}  {...item}/>
   ))}
 </div>
 
