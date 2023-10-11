@@ -2,6 +2,7 @@
 import ProfileCardDetail from '@/components/ProfileCardDetail'
 import React ,{useState ,useEffect}  from 'react'
 import { useRouter ,useSearchParams } from 'next/navigation';
+import CardMemeberDetail from '@/components/CardMemeberDetail';
 
 function TeamCarddetail({params}) {
   const searchParams = useSearchParams()
@@ -34,7 +35,8 @@ data.ok && setIsFetching(false)
 
   return (
     <div>
-      <ProfileCardDetail  isFetching={isFetching}/>
+      <ProfileCardDetail  isFetching={isFetching} {...userData}/>
+      {/* <CardMemeberDetail {...userData} /> */}
     </div>
   )
 }

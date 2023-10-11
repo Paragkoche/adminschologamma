@@ -1,5 +1,6 @@
 import { findCommitteeNameById } from '@/utils/findNameCommitteeById'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 export default function ProfileClientCard({
@@ -17,7 +18,7 @@ skill,
 cgpa,
 hobby ,
 name,
-// year ,
+year ,
 
 _id
 }) {
@@ -53,7 +54,15 @@ _id
 
 
             <div class="text-center my-3">
-                <a class="text-xs text-indigo-500 italic hover:underline hover:text-indigo-600 font-medium" href="#">View Profile</a>
+                {/* <Link  href={`/teamscard/teamcarddetail/${_id}?year=2023`}>
+                <p class="text-xs text-indigo-500 italic hover:underline hover:text-indigo-600 font-medium" >View Profile</p>
+                </Link> */}
+
+                <Link href={{ pathname: `/teamscard/teamcarddetail/${BT_ID}`, query: { year:'2023' } }}>
+                <p class="text-xs text-indigo-500 italic hover:underline hover:text-indigo-600 font-medium" >View Profile</p>
+
+  </Link>
+
             </div>
 
         </div>

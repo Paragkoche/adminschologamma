@@ -24,9 +24,9 @@ function ViewCommittee({params}) {
 
     const [eventData ,setEventData] =useState([])
     const [teamData ,setTeamData] =useState([])
+    const year = '2023'
 
     useEffect(() => {
-  const year = getCurrentYear()
       // if( committeeData.length===0) {
      const fetchData = async()=>{
       const res = await fetch(`/api/committee/viewId/${params.id}`)
@@ -135,6 +135,7 @@ function ViewCommittee({params}) {
 
 </Modal>
 <div className="flex flex-wrap justify-center items-center space-x-[20px]">
+  {eventData.length == 0 && <h2 className='text-center font-semibold bg-blue-400' >Comming Soon...</h2>} 
 {
   eventData?.map(item =>(
     <EventCard key={item._id} {...item}  handleIsUpdate={handleIsUpdate}/>
@@ -169,6 +170,11 @@ function ViewCommittee({params}) {
   ))}
 </div>
 
+<div className="flex flex-row justify-around items-center flex-wrap w-[100%]">
+  {teamData?.filter(item=>item.type =="Admin").map(item =>(
+   <ProfileClientCard key={item._id}  {...item} year={'2023'}  />
+  ))}
+</div>
 </div>
 
 
