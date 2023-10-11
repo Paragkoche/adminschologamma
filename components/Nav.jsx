@@ -23,7 +23,7 @@ const Nav =()=>{
     {!auth.user ?
     <>
       <li><Link href={'/join/login'}> Login</Link></li>
-      <li><Link href={'/join/signin'}> SingIn</Link></li>
+      {/* <li><Link href={'/join/signin'}> SingIn</Link></li> */}
       </>
       :
       <>

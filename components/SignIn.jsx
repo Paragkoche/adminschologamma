@@ -87,35 +87,35 @@ setUserData({...userData , [e.target.name]:e.target.value})
   //  return 0
     //  userData.email
     setIsSubmitting(true)
-    try{
-      const res = await fetch('/api/user/',{
-        method:"POST" ,
-        body:JSON.stringify(userData)
-      }) ;
-      const data = await res.json()
-      console.log(data)
+//     try{
+//       const res = await fetch('/api/user/',{
+//         method:"POST" ,
+//         body:JSON.stringify(userData)
+//       }) ;
+//       const data = await res.json()
+//       console.log(data)
 
-      if( data.ok ===true )
-      { dd.setAuth({
-       user:true,
-       authtoken:data.token
-      }) 
+//       if( data.ok ===true )
+//       { dd.setAuth({
+//        user:true,
+//        authtoken:data.token
+//       }) 
       
-      dd.auth && router.push('/')
-    }
-    setIsSubmitting(false)
-// for giving the error oin mongoose
-    if(data?.error){
-    return dd.setAlertFunc(data.type , data.error)
+//       dd.auth && router.push('/')
+//     }
+//     setIsSubmitting(false)
+// // for giving the error oin mongoose
+//     if(data?.error){
+//     return dd.setAlertFunc(data.type , data.error)
       
-    }
-      console.log(data.error)
-    dd.setAlertFunc(data.type , data.msg)
+//     }
+//       console.log(data.error)
+//     dd.setAlertFunc(data.type , data.msg)
 
-  }
-  catch(e){
+//   }
+//   catch(e){
 
-  }
+//   }
   }
   return (
     <div className='flex justify-center items-center '>

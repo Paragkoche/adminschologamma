@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const CommitteCard = ({name , _id ,photo, css})=>{
+
     return (
         <div className="flex flex-col justify-center items-center m-[20px]">
 
