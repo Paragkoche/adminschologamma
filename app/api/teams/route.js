@@ -1,7 +1,7 @@
 import { connectToDB } from '@/utils/database';
 import Teams from '@/models/teams';
 export const GET = async(req )=>{
-
+    const origin = req.headers.get('origin')
 // for fetch the list of year
 
     try {
@@ -10,7 +10,10 @@ export const GET = async(req )=>{
     
     const check1 = await Teams.find({} ,'year')
    
-    return new Response(JSON.stringify({msg:"Data Teams fetch successFully" ,data:check1 , ok:true}) , {status:200})
+    return new Response(JSON.stringify({msg:"Data Teams fetch successFully" ,data:check1 , ok:true}) ,{status:200 ,headers:{
+        'Access-Control-Allow-Origin':origin||"*",
+        'Content-Type':'application/json'
+    }})
     
     } catch (error) {
     console.log(error)

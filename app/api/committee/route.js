@@ -4,6 +4,7 @@ import  Committee from '@/models/committee';
 // get committee list
 export const GET = async(req)=>{
     // const data= await req.json();
+    const origin = req.headers.get('origin')
 try {
    await connectToDB()
 
@@ -19,7 +20,10 @@ try {
 //     return comm;
 //   });
 console.log(codata)
-return new Response(JSON.stringify({data:codata, msg:"data fetch from server" , type:"success" , ok:true}) , {status:200})
+return new Response(JSON.stringify({data:codata, msg:"data fetch from server" , type:"success" , ok:true}) , {status:200 ,headers:{
+    'Access-Control-Allow-Origin':origin||"*",
+    'Content-Type':'application/json'
+}} )
    
 
 
