@@ -22,7 +22,7 @@ export  const middleware =async (req)=>{
     // // console.log(req)
     // console.log(req)
 
-    if((req.method =="POST" || req.method =="PUT"||req.method =="DELETE" )&& ! req.nextUrl.href.endsWith("/api/user/login") ){
+    if((req.method =="POST" || req.method =="PUT"||req.method =="DELETE" )&& ! req.nextUrl.href.endsWith("/api/user/login") && ! req.nextUrl.href.endsWith("/api/upload")){
         const authTOken =req.headers.get('auth-token')
         // let user ;
         // const funct = async()=>{
@@ -38,12 +38,12 @@ export  const middleware =async (req)=>{
             return new Response(JSON.stringify({msg:"Invalid Authentication Token" , type:'error',ok:false}))
 
         }
-    //     const host = req.nextUrl.origin
-    //     const user1 =await  verifyJWT(authTOken ,host)
+        const host = req.nextUrl.origin
+        const user1 =await  verifyJWT(authTOken ,host)
 
-    //    if(! user1.ok ){
-    //     return new Response(JSON.stringify({msg:user1.msg, type:'error',ok:false}))
-    //    } 
+       if(! user1.ok ){
+        return new Response(JSON.stringify({msg:user1.msg, type:'error',ok:false}))
+       }
        
 
        
@@ -52,7 +52,6 @@ export  const middleware =async (req)=>{
 
     }
 
-    return NextResponse.next()
 
 }
 return NextResponse.next()
