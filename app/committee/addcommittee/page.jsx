@@ -162,6 +162,10 @@ if(!imgUrl.result){
 const res = await fetch('/api/committee/add' , {
     method:"POST",
     body:JSON.stringify({...committeeData , photo:imgUrl.result.secure_url})
+    ,
+headers:{
+    'auth-token':dd.auth.authtoken || null
+}
 
 });
 const data = await res.json() ;

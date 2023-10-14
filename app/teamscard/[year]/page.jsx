@@ -156,6 +156,10 @@ const dd = useContext(DataContext)
     // write db cosde here
     const res =await fetch(`/api/teams/delete/${params.year}` ,{
       method:"POST" ,
+      
+headers:{
+    'auth-token':dd.auth.authtoken || null
+},
     body:JSON.stringify({BI_ID:deletename.BI_ID})
     })
     console.log(deletename.BI_ID)

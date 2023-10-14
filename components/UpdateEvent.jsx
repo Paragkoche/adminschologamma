@@ -167,6 +167,10 @@ function UpdateEvent({ updateEventData, setAllEventData, setIsUpdate ,committeeI
             }
             const res = await fetch(`/api/events/`, {
                 method: "POST",
+                
+headers:{
+    'auth-token':dd.auth.authtoken || " "
+} ,
                 body: JSON.stringify({ ...dataEvent, poster: imgUrl.result.secure_url })
             })
 
@@ -190,6 +194,10 @@ function UpdateEvent({ updateEventData, setAllEventData, setIsUpdate ,committeeI
         const res = await fetch(`/api/events/`, {
             method: "POST",
             body: JSON.stringify({ ...dataEvent })
+            ,
+headers:{
+    'auth-token':dd.auth.authtoken || " "
+}
         })
 
         const data = await res.json();

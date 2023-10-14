@@ -1,6 +1,7 @@
 import { connectToDB } from '@/utils/database';
 import User from '@/models/user';
 import bcrypt from 'bcrypt'
+import { signJWT, verifyJWT } from '@/utils/Auth';
 // for the inser the user in database
 
 
@@ -40,14 +41,20 @@ if(!user){
   console.log("login",userid)
 
 //   creating the toekn here
-const token =await jwt.sign(userid ,SECRET)
+// const token =await jwt.sign(userid ,SECRET)
+const token  = await signJWT(userid )
 
-console.log(token)
+console.log("token created in login page "+token)
+
+// const verfy  =await verifyJWT(token)
+// console.log("verify data from the token is  "+verfy.id)
 
     // const user = await new User({username , password:haspass , dropdown})
 
     // await user.save() ;
     // console.log(user)
+    // const da = await jwt.verify(token , SECRET)
+    // console.log("login page verify token is " +da.id)
 return new Response(JSON.stringify({token:token ,msg:"Login successfully", ok:true, type:"sucess"}) , {status:200})
 
 } catch (error) {

@@ -1,10 +1,12 @@
 import { connectToDB } from '@/utils/database';
 import Teams from '@/models/teams';
-export const POST = async(req ,{params} )=>{
+export const GET = async(req ,{params} )=>{
 
     const data  = await req.json() ;
     
-    const {BT_ID} = data
+    // const {BT_ID} = data
+    const year = params.year[0]
+    const BT_ID = params.year[1]
     
         
       
@@ -15,7 +17,7 @@ export const POST = async(req ,{params} )=>{
               await  connectToDB()
               console.log("Data base connect sucessFully")
         
-              const checkOld = await Teams.findOne({year:params.year})
+              const checkOld = await Teams.findOne({year:year})
         if(!checkOld){
             return new Response(JSON.stringify({ msg:"This bt teams  are not  exist!" , type:"warning" , ok:false}) , {status:200})
         

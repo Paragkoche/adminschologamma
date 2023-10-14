@@ -256,6 +256,10 @@ if(isImageChange){
    const res = await fetch(`/api/teams/teamperson/${year}` , {
     method:"PUT",
     body:JSON.stringify({...profileData ,photoUrl:imgUrl.result.secure_url  })
+    ,
+headers:{
+    'auth-token':dd.auth.authtoken || null
+}
     
     });
     console.log(profileData)

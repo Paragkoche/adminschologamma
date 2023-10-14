@@ -109,6 +109,10 @@ return  dd.setAlertFunc('error' ,"Server Error")
 }
 const res =await fetch(`/api/committee/update` ,{
     method:"POST",
+    
+headers:{
+    'auth-token':dd.auth.authtoken || null
+},
     body:JSON.stringify({...committeeData ,photo:imgUrl.result.secure_url})
 })
 
@@ -130,6 +134,10 @@ console.log(committeeData)
         const res =await fetch(`/api/committee/update` ,{
             method:"POST",
             body:JSON.stringify({...committeeData})
+            ,
+headers:{
+    'auth-token':dd.auth.authtoken || null
+}
         })
 
         const data =await res.json();

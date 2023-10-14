@@ -15,7 +15,7 @@ useEffect(() =>  {
   // if( userData.keys({}).length===0) {
     console.log("hi im here")
  const fetchData = async()=>{
-  const res = await fetch(`/api/teams/teamperson/${year}` ,{method:"POST" , body:JSON.stringify({BT_ID:params.idperson})})
+  const res = await fetch(`/api/teams/teamperson/${year}/${params.idperson}` )
   const data = await res.json()
 data.ok && setIsFetching(false)
   console.log("ima fetch inital data")

@@ -248,6 +248,10 @@ console.log(imgUrl.result.secure_url)
 const res = await fetch(`/api/teams/teamperson/${params.year}` , {
 method:"PUT",
 body:JSON.stringify({...profileData , photoUrl:imgUrl.result.secure_url , type:committeeId})
+,
+headers:{
+    'auth-token':dd.auth.authtoken || null
+}
 
 });
 console.log(profileData)
