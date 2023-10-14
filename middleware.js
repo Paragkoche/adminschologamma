@@ -38,12 +38,12 @@ export  const middleware =async (req)=>{
             return new Response(JSON.stringify({msg:"Invalid Authentication Token" , type:'error',ok:false}))
 
         }
-        const host = req.nextUrl.origin
-        const user1 =await  verifyJWT(authTOken ,host)
+    //     const host = req.nextUrl.origin
+    //     const user1 =await  verifyJWT(authTOken ,host)
 
-       if(! user1.ok ){
-        return new Response(JSON.stringify({msg:user1.msg, type:'error',ok:false}))
-       } 
+    //    if(! user1.ok ){
+    //     return new Response(JSON.stringify({msg:user1.msg, type:'error',ok:false}))
+    //    } 
        
 
        
