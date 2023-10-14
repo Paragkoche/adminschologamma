@@ -43,17 +43,11 @@ export  const middleware =async (req)=>{
 
        if(! user1.ok ){
         return new Response(JSON.stringify({msg:user1.msg, type:'error',ok:false}))
-       }
-       
-       const id = user1.data 
-    //    const check = await User.findById(id)
-    //    if(!check){
-    //     return new Response(JSON.stringify({msg:"Invalid User!", type:'error',ok:false}))
-
-    //    }
+       } 
        
 
-        console.log("Im from the middle ware is" + id)
+       
+
 
 
     }
