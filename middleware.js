@@ -7,12 +7,12 @@ import { verifyJWT } from './utils/Auth'
 
 // import {User} from '@/models/user';
 
-const allowedOrigins =  process.env.NODE_ENV ==='production' ?['https://adminab9211.vercel.app' , 'https://schologamma.vercel.app' ,'http://localhost:3001']:['http://localhost:3000' ,'http://localhost:3001' ,'https://www.google.com']
+const allowedOrigins =  process.env.NODE_ENV ==='production' ?['https://adminab9211.vercel.app' , 'https://schologamma.vercel.app' ]:['http://localhost:3000' ,'http://localhost:3001' ,]
 export  const middleware =async (req)=>{
 
 // condition for the origin for the next js 
 const origin = req.headers.get('origin')
-if(origin && ! allowedOrigins.includes(origin) || ! origin){
+if(origin && ! allowedOrigins.includes(origin) ){
     return new Response(null, {status:400,
     statusText:"Bad Requset",
     headers :{
