@@ -13,7 +13,7 @@ export  const middleware =async (req)=>{
     const  regax = new RegExp("/api/*")
 //   const ww =  getUser()
 //   console.log(ww)
-// console.log(req)
+console.log(req)
 // console.log()
     if(regax.test(req.url)){
 
@@ -33,7 +33,7 @@ export  const middleware =async (req)=>{
         // funct();
 
         console.log("Ima here now")
-        // console.log("this is my authtoken " +user)
+        console.log("this is my authtoken " +authTOken)
         if(!authTOken || authTOken ===null || authTOken =="" || authTOken.trim().length ===0){
             return new Response(JSON.stringify({msg:"Invalid Authentication Token" , type:'error',ok:false}))
 

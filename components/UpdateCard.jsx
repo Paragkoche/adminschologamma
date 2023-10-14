@@ -253,15 +253,18 @@ if(isImageChange){
 
    return  dd.setAlertFunc('error' ,"Server Error")
    }
+   console.log("the token "+dd.auth.authtoken)
    const res = await fetch(`/api/teams/teamperson/${year}` , {
     method:"PUT",
-    body:JSON.stringify({...profileData ,photoUrl:imgUrl.result.secure_url  })
-    ,
-headers:{
-    'auth-token':dd.auth.authtoken || null
-}
+    headers:{
+        'auth-token':dd.auth.authtoken 
+    },
+    body:JSON.stringify({...profileData ,photoUrl:imgUrl.result.secure_url  }),
+
     
     });
+
+  
     console.log(profileData)
     const data = await res.json() ;
     const ds = data.data
@@ -280,8 +283,11 @@ headers:{
 
 const res = await fetch(`/api/teams/teamperson/${year}` , {
 method:"PUT",
-body:JSON.stringify({...profileData  })
+body:JSON.stringify({...profileData  }),
 
+headers:{
+    'auth-token':dd.auth.authtoken 
+},
 });
 console.log(profileData)
 const data = await res.json() ;
