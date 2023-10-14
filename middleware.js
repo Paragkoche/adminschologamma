@@ -7,7 +7,7 @@ import { verifyJWT } from './utils/Auth'
 
 // import {User} from '@/models/user';
 
-const allowedOrigins =  process.env.NODE_ENV ==='production' ?['https://adminab9211.vercel.app' , 'https://schologamma.vercel.app']:['http://localhost:3000' ,'http://localhost:3001']
+const allowedOrigins =  process.env.NODE_ENV ==='production' ?['https://adminab9211.vercel.app' , 'https://schologamma.vercel.app' ,'http://localhost:3001']:['http://localhost:3000' ,'http://localhost:3001' ,'https://www.google.com']
 export  const middleware =async (req)=>{
 
 // condition for the origin for the next js 
