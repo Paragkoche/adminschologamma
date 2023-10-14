@@ -173,8 +173,8 @@ setDataEvent(pre=>({...pre ,organizer:committeeId}))
     const imgUrl =await uploadImage(dataEvent.poster)
     console.log(imgUrl)
     
-    imgUrl?.result && setDataEvent(pre=>({...pre , poster:imgUrl.result.url}))
-    console.log(imgUrl?.result.url)
+    imgUrl?.result && setDataEvent(pre=>({...pre , poster:imgUrl.result.secure_url}))
+    console.log(imgUrl?.result.secure_url)
     if(!imgUrl.result){
     
      return  dd.setAlertFunc('error' ,"Server Error")
@@ -183,7 +183,7 @@ setDataEvent(pre=>({...pre ,organizer:committeeId}))
     
     const res = await fetch('/api/events/add' , {
         method:"POST",
-        body:JSON.stringify({...dataEvent , poster:imgUrl.result.url , organizer:committeeId})
+        body:JSON.stringify({...dataEvent , poster:imgUrl.result.secure_url , organizer:committeeId})
     ,
     headers:{
         'auth-token':dd.auth.authtoken || null
