@@ -4,7 +4,7 @@ import Committee from "@/models/committee";
 // get committee list
 export const GET = async (req) => {
   // const data= await req.json();
-  const origin = req.headers.get("origin");
+  // const origin = req.headers.get("origin");
   try {
     await connectToDB();
 
@@ -30,10 +30,10 @@ export const GET = async (req) => {
       {
         status: 200,
         headers: {
-          "Access-Control-Allow-Origin": origin || "*",
+          // "Access-Control-Allow-Origin": origin || "*",
           "Content-Type": "application/json",
         },
-      },
+      }
     );
   } catch (error) {
     return new Response(
@@ -45,12 +45,12 @@ export const GET = async (req) => {
       {
         status: 200,
         headers: {
-          "Access-Control-Allow-Origin": origin || "*",
+          // "Access-Control-Allow-Origin": origin || "*",
           "Content-Type": "application/json",
           "Access-Control-Allow-Methods": "GET",
           "Access-Control-Allow-Headers": "Content-Type",
         },
-      },
+      }
     );
   }
 };

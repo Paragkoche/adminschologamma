@@ -19,10 +19,10 @@ export const GET = async (req) => {
       {
         status: 200,
         headers: {
-          "Access-Control-Allow-Origin": origin || "*",
+          // "Access-Control-Allow-Origin": origin || "*",
           "Content-Type": "application/json",
         },
-      },
+      }
     );
   } catch (error) {
     console.log(error);
@@ -32,7 +32,7 @@ export const GET = async (req) => {
         ok: false,
         error: error,
         msg: "Failed to fetch the prompt for user",
-      }),
+      })
     );
   }
 };
