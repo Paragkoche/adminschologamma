@@ -29,7 +29,12 @@ return new Response(JSON.stringify({data:codata, msg:"data fetch from server" , 
 
 
 } catch (error) {
-return new Response(JSON.stringify({ msg:" Error occured in data fetch from server" , type:"success" , ok:false}) , {status:200})
+return new Response(JSON.stringify({ msg:" Error occured in data fetch from server" , type:"success" , ok:false}) , {status:200 ,headers:{
+    'Access-Control-Allow-Origin':origin||"*",
+    'Content-Type':'application/json',
+    'Access-Control-Allow-Methods':'GET',
+    'Access-Control-Allow-Headers': 'Content-Type'
+}})
     
 }
 

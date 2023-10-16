@@ -11,16 +11,7 @@ const allowedOrigins =  process.env.NODE_ENV ==='production' ?['https://adminab9
 export  const middleware =async (req)=>{
 
 // condition for the origin for the next js 
-const origin = req.headers.get('origin')
-if(origin && ! allowedOrigins.includes(origin) ){
-    return new Response(null, {status:400,
-    statusText:"Bad Requset",
-    headers :{
-        'Content-Type':'text/plain'
-    }
-    })
 
-}
 
     const  regax = new RegExp("/api/*")
 //   const ww =  getUser()
@@ -28,6 +19,17 @@ if(origin && ! allowedOrigins.includes(origin) ){
 // console.log(req)
 // console.log()
     if(regax.test(req.url)){
+
+        const origin = req.headers.get('origin')
+// if(origin && ! allowedOrigins.includes(origin) ){
+//     return new Response(null, {status:400,
+//     statusText:"Bad Requset",
+//     headers :{
+//         'Content-Type':'text/plain'
+//     }
+//     })
+
+// }
 
     console.log("middleware call ")
     // console.log("your call by harish from "+req.method)
