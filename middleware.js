@@ -21,15 +21,15 @@ export  const middleware =async (req)=>{
     if(regax.test(req.url)){
 
         const origin = req.headers.get('origin')
-// if(origin && ! allowedOrigins.includes(origin) ){
-//     return new Response(null, {status:400,
-//     statusText:"Bad Requset",
-//     headers :{
-//         'Content-Type':'text/plain'
-//     }
-//     })
+if(origin && ! allowedOrigins.includes(origin) ){
+    return new Response(null, {status:400,
+    statusText:"Bad Requset",
+    headers :{
+        'Content-Type':'text/plain'
+    }
+    })
 
-// }
+}
 
     console.log("middleware call ")
     // console.log("your call by harish from "+req.method)

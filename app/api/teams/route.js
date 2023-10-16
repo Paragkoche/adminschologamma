@@ -11,8 +11,7 @@ export const GET = async(req )=>{
     const check1 = await Teams.find({} ,'year')
    
     return new Response(JSON.stringify({msg:"Data Teams fetch successFully" ,data:check1 , ok:true}) ,{status:200 ,headers:{
-        'Access-Control-Allow-Origin':"*",
-        // 'Access-Control-Allow-Origin':origin||"*",
+        'Access-Control-Allow-Origin':origin||"*",
         'Content-Type':'application/json'
     }})
     
