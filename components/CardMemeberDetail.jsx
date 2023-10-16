@@ -1,10 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function CardMemeberDetail() {
-  return (
-    <div>
-        hir
-      
-    </div>
-  )
+  return <div>hir</div>;
 }

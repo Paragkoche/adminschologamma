@@ -17,37 +17,23 @@ import UpdateCommittee from "./UpdateComittee";
 import UpdateEvent from "./UpdateEvent";
 import Modal2 from "./Modal2";
 import Authlogin from "./Authlogin";
-export  {
-    Teams ,
-    Nav,
-    Committe,
-Authlogin
-    ,
-Hero,
-Title,
-FormInput1,
-FormInput ,
-CommButton,
-EventCard,
-SignIn,
-Modal,
-ModalAlert,
-UpdateEvent
-,
-Modal2
-
-
-,
-UpdateCard,
-Alert,
-UpdateCommittee
-
-
-
-
-
-
-
-
-
-}
+export {
+  Teams,
+  Nav,
+  Committe,
+  Authlogin,
+  Hero,
+  Title,
+  FormInput1,
+  FormInput,
+  CommButton,
+  EventCard,
+  SignIn,
+  Modal,
+  ModalAlert,
+  UpdateEvent,
+  Modal2,
+  UpdateCard,
+  Alert,
+  UpdateCommittee,
+};

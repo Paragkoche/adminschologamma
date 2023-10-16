@@ -1,17 +1,15 @@
-import { Schema , model ,models } from "mongoose";
+import { Schema, model, models } from "mongoose";
 // imageLink:"" ,
-// description:"" 
+// description:""
 const SliderSchema = new Schema({
-    imageLink:{
-        type:String ,
-        
+  imageLink: {
+    type: String,
+  },
+  description: {
+    type: String,
+  },
+});
 
-    },
-    description:{
-        type:String
-    }
-})
+const Slider = models.Slider || model("Events", SliderSchema);
 
-const Slider = models.Slider || model( "Events" ,SliderSchema);
-
-export default Slider ;
+export default Slider;

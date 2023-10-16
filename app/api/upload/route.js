@@ -11,7 +11,10 @@ export async function POST(request) {
   const { path } = await request.json();
   // console.log(path)
   if (!path) {
-    return NextResponse.json({ message: "Image path is required" }, { status: 400 });
+    return NextResponse.json(
+      { message: "Image path is required" },
+      { status: 400 },
+    );
   }
 
   try {

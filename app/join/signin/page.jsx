@@ -1,12 +1,11 @@
-import React from 'react'
-import { SignIn ,Model} from '@/components'
+import React from "react";
+import { SignIn, Model } from "@/components";
 function Signin() {
   return (
     <div>
-        <SignIn />
-
+      <SignIn />
     </div>
-  )
+  );
 }
 
-export default Signin
+export default Signin;

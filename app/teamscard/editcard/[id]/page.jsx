@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function EditCard({prams}) {
-  return (
-    <div>
-    edit
-    </div>
-  )
+function EditCard({ prams }) {
+  return <div>edit</div>;
 }
 
-export default EditCard
+export default EditCard;

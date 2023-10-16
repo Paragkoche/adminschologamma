@@ -1,29 +1,27 @@
 export function isValidEmail(email) {
-    // Regular expression for basic email validation
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-  
-    // Use the test method to check if the email matches the pattern
-    return emailPattern.test(email);
+  // Regular expression for basic email validation
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+  // Use the test method to check if the email matches the pattern
+  return emailPattern.test(email);
+}
+
+export function isValidUsername(username) {
+  // Check the length of the username
+  if (username.length < 8 || username.length > 20) {
+    return false;
   }
 
-
-  export  function isValidUsername(username) {
-    // Check the length of the username
-    if (username.length < 8 || username.length > 20) {
-      return false;
-    }
-  
-    // Check if the username contains only alphanumeric characters
-    if (!/^[a-zA-Z0-9]+$/.test(username)) {
-      return false;
-    }
-  
-
-    return true;
+  // Check if the username contains only alphanumeric characters
+  if (!/^[a-zA-Z0-9]+$/.test(username)) {
+    return false;
   }
 
-  // password
-  // passwordValidation.js
+  return true;
+}
+
+// password
+// passwordValidation.js
 
 export function isValidPassword(password) {
   // Password should be at least 8 characters long
@@ -53,7 +51,6 @@ export function isValidPassword(password) {
 
   return true;
 }
-
 
 // is valid year function
 export function isValidYear(yearString) {
